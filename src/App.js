@@ -48,7 +48,8 @@ function App() {
   };
 
   const handleSelection = (friend) => {
-    setSelectedFriend(friend);
+    // setSelectedFriend(friend);
+    setSelectedFriend((cur) => (cur?.id === friend.id ? null : friend));
   };
 
   return (
@@ -105,7 +106,9 @@ const Friend = ({ friend, onSelection, selectedFriend }) => {
         </p>
       )}
       {friend.balance === 0 && <p>You owe {friend.name} are even</p>}
-      <Button onClick={() => onSelection(friend)}>Select</Button>
+      <Button onClick={() => onSelection(friend)}>
+        {isSelected ? "Close" : "Select"}
+      </Button>
     </li>
   );
 };
