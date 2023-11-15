@@ -1,0 +1,24 @@
+.btn-red {
+  background-color: red;
+}
+.blue-btn {
+  background-color: blue;
+  width: 300px;
+}
+.buttons {
+  padding: 10px 15px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+}
+
+.addFriend {
+  background: #000;
+  color: #fff;
+}
+.addFriend:hover {
+  background: #fff;
+  color: #000;
+  border: 1px solid grey;
+  transition: 1s;
+}
